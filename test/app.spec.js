@@ -1,16 +1,18 @@
-describe('A startCalc tesztje', () => {
+describe('A calcSurface tesztje', () => {
     it('Input 15, 15, elvárt 2827.4333882308138', () => {    
-        let actual = startCalc(15, 15);
-        expect(actual).toBe(2827.4333882308138);
+        let actual = calcSurface(15,15);
+        expect(actual).toBeCloseTo(2827.4333882308138,2);
     });
-    it('Input a, a, elvárt Hibás adat ', () => {
-        let actual = startInput(a, a);
-        expect(actual).toBe('Hibás bevitt értékek');
+    it('Input 500, 500, elvárt 3141592.653589793', () => {    
+        let actual = calcSurface(500, 500);
+        expect(actual).toBeCloseTo(3141592.653589793,2.0);
     });
-    
-   
-    
-   
+    it('Input 12.5, 12.5, elvárt 3141592.653589793', () => {    
+        let actual = calcSurface(12.5, 12.5);
+        expect(actual).toBeCloseTo(1963.4954084936207,2.0);
+    });
+
+     
 });
 
 describe('A isGoodInput() tesztjei', () => {
